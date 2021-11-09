@@ -1,4 +1,9 @@
 import Swordsman from '../swordsman';
+import Character from "../app";
+
+test('Наследуется от Character', () => {
+    expect(new Character('Lena', 'Swordsman')).toBeInstanceOf(Character);
+});
 
 test('Создание нового персонажа Swordsman', () => {
     const received = new Swordsman('Bob', 'Swordsman');

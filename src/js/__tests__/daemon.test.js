@@ -1,4 +1,9 @@
 import Daemon from '../daemon';
+import Character from "../app";
+
+test('Наследуется от Character', () => {
+    expect(new Character('Lena', 'Daemon')).toBeInstanceOf(Character);
+});
 
 test('Создание нового персонажа Daemon', () => {
     const received = new Daemon('Roman', 'Daemon');

@@ -1,8 +1,5 @@
 import Character from '../app';
 
-test('Наследуется от Character', () => {
-    expect(new Character('Lena', 'Zombie')).toBeInstanceOf(Character);
-});
 
 test('Тип Character', () => {
     const received = typeof Character;
@@ -11,17 +8,13 @@ test('Тип Character', () => {
 });
 
 test('Ошибка в name', () => {
-    const errName = { name: 'A', type: 'Bowman' };
     expect(() => {
-        const nameE = new Character(errName);
-        return nameE;
-    }).toThrow();
+        return new Character('A', 'Bowman' );
+    }).toThrow(new Error('Ошибка в name'));
 });
 
 test('Ошибка в type', () => {
-    const errType = { name: 'Lena', type: 'Bow' };
     expect(() => {
-        const typeE = new Character(errType);
-        return typeE;
-    }).toThrow();
+        return new Character('Lena', 'Bow');
+    }).toThrow(new Error('Ошибка в type'));
 });

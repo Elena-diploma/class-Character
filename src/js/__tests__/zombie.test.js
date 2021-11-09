@@ -1,4 +1,10 @@
 import Zombie from '../zombie';
+import Character from "../app";
+
+test('Наследуется от Character', () => {
+    expect(new Character('Lena', 'Zombie')).toBeInstanceOf(Character);
+});
+
 
 test('Создание нового персонажа Zombie', () => {
     const received = new Zombie('Lena', 'Zombie');

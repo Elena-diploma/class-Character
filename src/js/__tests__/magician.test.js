@@ -1,4 +1,9 @@
 import Magician from '../magician';
+import Character from "../app";
+
+test('Наследуется от Character', () => {
+    expect(new Character('Lena', 'Magician')).toBeInstanceOf(Character);
+});
 
 test('Создание нового персонажа Magician', () => {
     const received = new Magician('Ann', 'Magician');
