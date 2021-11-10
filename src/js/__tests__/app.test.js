@@ -1,12 +1,5 @@
 import Character from '../app';
 
-
-test('Тип Character', () => {
-    const received = typeof Character;
-    const expected = 'function';
-    expect(received).toBe(expected);
-});
-
 test('Ошибка в name', () => {
     expect(() => {
         return new Character('A', 'Bowman' );
